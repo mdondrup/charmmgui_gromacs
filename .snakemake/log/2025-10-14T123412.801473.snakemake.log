@@ -1,0 +1,6 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: m62hfk4q5n
+Building DAG of jobs...
+CyclicGraphException in rule minimize in file "/Users/michael.dondrup/Downloads/charmm-gui-6035451184/gromacs/Snakefile", line 19:
+Cyclic dependency on rule minimize.

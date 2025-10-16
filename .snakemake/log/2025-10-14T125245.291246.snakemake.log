@@ -1,0 +1,26 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: m62hfk4q5n
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+clean        1
+total        1
+
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Oct 14 12:52:45 2025]
+localrule clean:
+    jobid: 0
+    reason: Rules with neither input nor output files are always executed.
+    resources: tmpdir=/var/folders/82/r9fmn2fx27v_rc8gv8m59hz80000gn/T
+
+Waiting for more resources.
+[Tue Oct 14 12:52:45 2025]
+Finished jobid: 0 (Rule: clean)
+1 of 1 steps (100%) done
+Complete log(s): /Users/michael.dondrup/Downloads/charmm-gui-6035451184/gromacs/.snakemake/log/2025-10-14T125245.291246.snakemake.log

@@ -1,0 +1,86 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: m62hfk4q5n
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count
+-------------  -------
+all                  1
+production_1         1
+production_10        1
+production_2         1
+production_3         1
+production_4         1
+production_5         1
+production_6         1
+production_7         1
+production_8         1
+production_9         1
+total               11
+
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Oct 14 14:53:30 2025]
+Job 10: Running production step 1
+Reason: Missing output files: step5_1.gro, step5_1.cpt; Code has changed since last execution
+
+Waiting for more resources.
+RuleException:
+CalledProcessError in file "/Users/michael.dondrup/Downloads/charmm-gui-6035451184/gromacs/Snakefile", line 108:
+Command 'set -euo pipefail;  
+            echo "Starting production step 1"
+            if [ "xxx" == "xxx" ]; then
+                CONT_FLAG=""
+            else
+                CONT_FLAG="-t "
+            fi
+            gmx grompp -f step5_production.mdp -o step5_1.tpr                -c step4.1_equilibration.gro                -p topol.top                -n index.ndx ${CONT_FLAG}                -maxwarn 1 2>&1 | tee logs/step5_1.log
+            gmx mdrun -v -deffnm step5_10 2>&1 | tee -a logs/step5_1.log' returned non-zero exit status 1.
+[Tue Oct 14 14:53:30 2025]
+Error in rule production_1:
+    message: None
+    jobid: 10
+    input: topol.top, step5_production.mdp, step4.1_equilibration.gro, index.ndx
+    output: step5_1.tpr, step5_1.gro, step5_1.edr, step5_1.cpt
+    log: logs/step5_1.log (check log file(s) for error details)
+    shell:
+        
+            echo "Starting production step 1"
+            if [ "xxx" == "xxx" ]; then
+                CONT_FLAG=""
+            else
+                CONT_FLAG="-t "
+            fi
+            gmx grompp -f step5_production.mdp -o step5_1.tpr                -c step4.1_equilibration.gro                -p topol.top                -n index.ndx ${CONT_FLAG}                -maxwarn 1 2>&1 | tee logs/step5_1.log
+            gmx mdrun -v -deffnm step5_10 2>&1 | tee -a logs/step5_1.log
+            
+        (command exited with non-zero exit code)
+Removing output files of failed job production_1 since they might be corrupted:
+step5_1.tpr
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Tue Oct 14 14:53:30 2025]
+Error in rule production_1:
+    message: None
+    jobid: 10
+    input: topol.top, step5_production.mdp, step4.1_equilibration.gro, index.ndx
+    output: step5_1.tpr, step5_1.gro, step5_1.edr, step5_1.cpt
+    log: logs/step5_1.log (check log file(s) for error details)
+    shell:
+        
+            echo "Starting production step 1"
+            if [ "xxx" == "xxx" ]; then
+                CONT_FLAG=""
+            else
+                CONT_FLAG="-t "
+            fi
+            gmx grompp -f step5_production.mdp -o step5_1.tpr                -c step4.1_equilibration.gro                -p topol.top                -n index.ndx ${CONT_FLAG}                -maxwarn 1 2>&1 | tee logs/step5_1.log
+            gmx mdrun -v -deffnm step5_10 2>&1 | tee -a logs/step5_1.log
+            
+        (command exited with non-zero exit code)
+Complete log(s): /Users/michael.dondrup/Downloads/charmm-gui-6035451184/gromacs/.snakemake/log/2025-10-14T145329.900690.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

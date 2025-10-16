@@ -1,0 +1,9 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: m62hfk4q5n
+Building DAG of jobs...
+MissingInputException in rule production_1 in file "/Users/michael.dondrup/Downloads/charmm-gui-6035451184/gromacs/Snakefile", line 91:
+Missing input files for rule production_1:
+    output: step5_1.tpr, step5_1.gro, step5_1.edr, step5_1.log, step5_1.cpt
+    affected files:
+        
